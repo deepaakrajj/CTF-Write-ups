@@ -26,7 +26,7 @@ Pickle Rick is an easy TryHackMe room focused on web enumeration and Linux comma
 ```bash
 nmap -sS -A -T4 MACHINE_IP
 ```
-
+<img width="835" height="808" alt="Screenshot 2026-05-24 003744" src="https://github.com/user-attachments/assets/cdd3f022-8ca3-48d2-906b-54c32ee681d9" />
 
 
 ### Findings
@@ -44,13 +44,35 @@ nmap -sS -A -T4 MACHINE_IP
 
 Browsing the website revealed a Rick and Morty themed page.
 
+<img width="2555" height="1355" alt="Screenshot 2026-05-24 003846" src="https://github.com/user-attachments/assets/773e49d6-af25-4016-93fa-dc84a77827d3" />
+
 Viewing the page source exposed a hidden username:
 
 ```html
 Username: R1ckRul3s
 ```
 
-![Page Source](images/source.png)
+<img width="1242" height="746" alt="Screenshot 2026-05-24 003905" src="https://github.com/user-attachments/assets/751f1dea-71ae-4ca2-ae47-c61fb20b33ac" />
+
+---
+
+
+## Gobuster Enumeration
+
+```bash
+gobuster dir -u http://MACHINE_IP \
+-w /usr/share/wordlists/dirb/common.txt \
+-x php,txt,html
+```
+
+<img width="829" height="820" alt="Screenshot 2026-05-24 005853" src="https://github.com/user-attachments/assets/a5db21f3-9778-4131-9bbd-c65f98fb199c" />
+
+---
+
+### Directories Found
+- /login.php
+- /portal.php
+- /robots.txt
 
 ---
 
@@ -62,26 +84,9 @@ Navigating to `/robots.txt` revealed a password:
 Wubbalubbadubdub
 ```
 
-![Robots](images/robots.png)
+<img width="557" height="249" alt="Screenshot 2026-05-24 010034" src="https://github.com/user-attachments/assets/74731e00-f0a6-4037-add3-13eb2ec4f6ba" />
 
----
 
-## Gobuster Enumeration
-
-```bash
-gobuster dir -u http://MACHINE_IP \
--w /usr/share/wordlists/dirb/common.txt \
--x php,txt,html
-```
-
-![Gobuster](images/gobuster.png)
-
-### Directories Found
-- /login.php
-- /portal.php
-- /robots.txt
-
----
 
 # 🔓 Exploitation
 
@@ -96,7 +101,8 @@ Password: Wubbalubbadubdub
 
 I successfully logged into `/login.php`.
 
-![Login Page](images/login.png)
+<img width="2556" height="913" alt="Screenshot 2026-05-24 005948" src="https://github.com/user-attachments/assets/74061f49-56f8-488f-a33f-64bc094bb3e8" />
+
 
 ---
 
@@ -117,7 +123,8 @@ Sup3rS3cretPickl3Ingred.txt
 clue.txt
 ```
 
-![Command Panel](images/panel.png)
+<img width="2559" height="506" alt="Screenshot 2026-05-24 010244" src="https://github.com/user-attachments/assets/98a2caed-beef-4091-9214-6767df485c5b" />
+
 
 ---
 
@@ -140,8 +147,7 @@ Output:
 ```text
 mr. meeseek hair
 ```
-
-![First Ingredient](images/flag1.png)
+<img width="2559" height="506" alt="Screenshot 2026-05-24 010244" src="https://github.com/user-attachments/assets/df33a2f6-e84a-4559-902f-e70836bcc9a3" />
 
 ---
 
@@ -181,7 +187,8 @@ Output:
 1 jerry tear
 ```
 
-![Second Ingredient](images/flag2.png)
+<img width="2559" height="528" alt="Screenshot 2026-05-24 010958" src="https://github.com/user-attachments/assets/c850653c-dff9-4bd4-828a-09d58286d9b4" />
+
 
 ---
 
@@ -211,7 +218,7 @@ Output:
 fleeb juice
 ```
 
-![Third Ingredient](images/flag3.png)
+<img width="2559" height="498" alt="Screenshot 2026-05-24 011347" src="https://github.com/user-attachments/assets/214d2a2c-98f1-49ec-8aa0-4ee4d23ac2b1" />
 
 ---
 
@@ -224,6 +231,7 @@ fleeb juice
 | Flag 3 | /root | `fleeb juice` |
 
 ---
+<img width="1627" height="986" alt="Screenshot 2026-05-24 011426" src="https://github.com/user-attachments/assets/9d6b37e7-99c1-4a57-a165-2464ba3f018c" />
 
 # 📚 Lessons Learned
 
