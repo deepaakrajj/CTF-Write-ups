@@ -77,7 +77,7 @@ Key takeaways, tools used, concepts reinforced.
 | Category | Tools |
 |----------|-------|
 | Reconnaissance | Nmap, Gobuster |
-| Exploitation | Hydra, PHP Reverse Shell, Netcat |
+| Exploitation | Hydra, PHP Reverse Shell, Netcat, FTP |
 | Privilege Escalation | GTFOBins |
 | Password Cracking | John the Ripper, ssh2john |
 | Enumeration | enum4linux |
@@ -88,7 +88,7 @@ Key takeaways, tools used, concepts reinforced.
 
 | Platform | Easy | Medium | Hard | Total |
 |----------|------|--------|------|-------|
-| TryHackMe | 3 | 0 | 0 | 3 |
+| TryHackMe | 4 | 0 | 0 | 4 |
 | HackTheBox | 0 | 0 | 0 | 0 |
 | PicoCTF | 0 | 0 | 0 | 0 |
 | **Total** | **0** | **0** | **0** | **0** |
