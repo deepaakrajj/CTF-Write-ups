@@ -78,10 +78,11 @@ Key takeaways, tools used, concepts reinforced.
 | Category | Tools |
 |----------|-------|
 | Reconnaissance | Nmap, Gobuster, WhatWeb |
-| Exploitation | Metasploit, Burp Suite, Hydra |
+| Exploitation | Metasploit, Burp Suite, Hydra, PHP Reverse Shell |
 | Privilege Escalation | LinPEAS, WinPEAS, GTFOBins |
 | Networking | Wireshark, Netcat, Tcpdump |
 | Password Cracking | John the Ripper, Hashcat |
+| Web | Gobuster, Burp Suite |
 
 ---
 
@@ -89,7 +90,7 @@ Key takeaways, tools used, concepts reinforced.
 
 | Platform | Easy | Medium | Hard | Total |
 |----------|------|--------|------|-------|
-| TryHackMe | 0 | 0 | 0 | 0 |
+| TryHackMe | 2 | 0 | 0 | 0 |
 | HackTheBox | 0 | 0 | 0 | 0 |
 | PicoCTF | 0 | 0 | 0 | 0 |
 | **Total** | **0** | **0** | **0** | **0** |
