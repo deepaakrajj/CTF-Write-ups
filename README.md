@@ -74,15 +74,13 @@ Key takeaways, tools used, concepts reinforced.
 ---
 
 ## 🛠️ Tools Used
-
 | Category | Tools |
 |----------|-------|
-| Reconnaissance | Nmap, Gobuster, WhatWeb |
-| Exploitation | Metasploit, Burp Suite, Hydra, PHP Reverse Shell |
-| Privilege Escalation | LinPEAS, WinPEAS, GTFOBins |
-| Networking | Wireshark, Netcat, Tcpdump |
-| Password Cracking | John the Ripper, Hashcat |
-| Web | Gobuster, Burp Suite |
+| Reconnaissance | Nmap, Gobuster |
+| Exploitation | Hydra, PHP Reverse Shell, Netcat |
+| Privilege Escalation | GTFOBins |
+| Password Cracking | John the Ripper, ssh2john |
+| Enumeration | enum4linux |
 
 ---
 
@@ -90,7 +88,7 @@ Key takeaways, tools used, concepts reinforced.
 
 | Platform | Easy | Medium | Hard | Total |
 |----------|------|--------|------|-------|
-| TryHackMe | 2 | 0 | 0 | 2 |
+| TryHackMe | 3 | 0 | 0 | 3 |
 | HackTheBox | 0 | 0 | 0 | 0 |
 | PicoCTF | 0 | 0 | 0 | 0 |
 | **Total** | **0** | **0** | **0** | **0** |
