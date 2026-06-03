@@ -88,7 +88,7 @@ Key takeaways, tools used, concepts reinforced.
 
 | Platform | Easy | Medium | Hard | Total |
 |----------|------|--------|------|-------|
-| TryHackMe | 5 | 0 | 0 | 5 |
+| TryHackMe | 7 | 0 | 0 | 7 |
 | HackTheBox | 0 | 0 | 0 | 0 |
 | PicoCTF | 0 | 0 | 0 | 0 |
 | **Total** | **0** | **0** | **0** | **0** |
